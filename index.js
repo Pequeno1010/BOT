@@ -1,12 +1,12 @@
-const { Client } = require('discord.js');
-const client = new Client({DisableEveryone: true});
+const { Discord } = require('discord.js');
+const bot = new Discord.Client({DisableEveryone: true});
 
-client.on('ready', async () =>{
+bot.on('ready', async () =>{
   console.log('Le bot est lancé.');
-  client.user.setActivity('Regarde Seattle RP');
+  bot.user.setActivity('Regarde Seattle RP');
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
 
 
 
