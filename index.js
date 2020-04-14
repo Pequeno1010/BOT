@@ -3,6 +3,7 @@ const client = new Client();
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  btoa.usersetActivity('Seattle RP');
 });
 
 client.on("message", msg => {
