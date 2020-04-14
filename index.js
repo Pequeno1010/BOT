@@ -1,19 +1,9 @@
-const { Client } = require("discord.js");
-const client = new Client();
+const Dicord = require('discord.js');
+const bot = new DynamicsCompressorNode.Client({DisableEveryone: true});
 
-client.on("ready", () => {
-  client.user.setActvity('Joues a rien');
+bot.on('ready', async () =>{
   console.log('Le bot est lancé.');
+  bot.user.setActivity('Bot tutoriel. Bonjour!');
 });
 
-client.on("message", msg => {
-
-  //message serveur on/reboot
-
-  if (msg.content === "ping") msg.channel.send("pong");
-});
-
-//variable prefix
-var prefix = ('!');
-
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
