@@ -1,7 +1,8 @@
 const { Client } = require("discord.js");
 const client = new Client();
 
-client.on("ready", () => {
+client.on("ready", async () => {
+  client.user.setActvity('Joues a rien');
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -14,3 +15,7 @@ client.on("message", msg => {
   if (msg.content === "!reboot") msg.channel.send("@everyone, serveur REBOOT");
 });
 
+//variable prefix
+var prefix = ('!');
+
+client.login('process.env.BOT_TOKEN');
