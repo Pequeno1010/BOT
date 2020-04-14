@@ -1,12 +1,20 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client({DisableEveryone: true});
+const { Client } = require("discord.js");
+const client = new Client();
 
-bot.on('ready', async () =>{
-  console.log('Le bot est lancé.');
-  bot.user.setActivity('Regarde Seattle RP');
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.on("message", msg => {
+
+  //message serveur on/reboot
+
+  if (msg.content === "ping") msg.channel.send("pong");
+  if (msg.content === "!on") msg.channel.send("@everyone, serveur ON");
+  if (msg.content === "!reboot") msg.channel.send("@everyone, serveur REBOOT");
+});
+
+client.login(process.env.BOT_TOKEN);
 
 
 
