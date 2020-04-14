@@ -1,7 +1,7 @@
 const { Client } = require("discord.js");
 const client = new Client();
 
-client.on("ready", () => {
+client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
   bot.user.setActivity('Seattle RP');
 });
