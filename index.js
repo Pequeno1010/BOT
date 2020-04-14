@@ -3,7 +3,7 @@ const client = new Client();
 
 client.on("ready", () => {
   client.user.setActvity('Joues a rien');
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log('Le bot est lancé.');
 });
 
 client.on("message", msg => {
