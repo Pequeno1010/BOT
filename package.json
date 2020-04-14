@@ -1,0 +1,13 @@
+{
+  "name": "BOT",
+  "version": "1.0.0",
+  "description": "discord bot",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.1.1"
+  }
+}
