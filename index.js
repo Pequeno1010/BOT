@@ -19,8 +19,6 @@ client.login(process.env.BOT_TOKEN);
 //variable prefix
 var prefix = ('!');
 
-client.login('');
-
 //mention d'une personne
 
 client.on('message', message => {
