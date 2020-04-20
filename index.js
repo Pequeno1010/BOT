@@ -12,6 +12,7 @@ client.on("message", msg => {
 
   if (msg.content === "ping") msg.channel.send("pong");
   if (msg.content === "!on") msg.channel.send("@everyone, serveur ON");
+                             msg.channel.send("▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬");
   if (msg.content === "!reboot") msg.channel.send("@everyone, serveur REBOOT");
 });
 
