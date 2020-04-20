@@ -12,7 +12,7 @@ client.on("message", msg => {
 
   if (msg.content === "ping") msg.channel.send("pong");
   if (msg.content === "!on") msg.channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                               ✅SERVEUR ON✅\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n ip serveur: 164.132.201.141:27190");
-  if (msg.content === "!reboot") msg.channel.send("@everyone, serveur REBOOT");
+  if (msg.content === "!reboot") msg.channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                           ⛔SERVEUR REBOOT⛔\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n Merci de bien vouloir patienter");
 });
 
 client.login(process.env.BOT_TOKEN);
