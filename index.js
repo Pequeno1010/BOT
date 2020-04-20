@@ -28,6 +28,7 @@ client.on('message', message => {
     if(message.content === prefix + "ip"){
 
         message.channel.send("ip serveur = ")
+        message.channel.send("ip serveur = ")
 
     }
 
