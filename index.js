@@ -38,6 +38,19 @@ client.on('message', message => {
 
 })
 
+//message
+client.on("message", message => {
+  var test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
+  
+  if(message.content === prefix + "ping"){
+    var embed = new Client.RichEmbed()
+    .setTitle("Message détecte !")
+    .addField("Réponse :", "pong !")
+    test.client.send(embed)
+  }
+
+})
+
 //message d'arrivée/départ
 
 client.on("guildMemberAdd", member => {
