@@ -10,7 +10,7 @@ client.on("ready", async () => {
 
 client.on("message", msg => {
 
-
+  client.channels.cache.get('id').send(arrivée)
   if (msg.content === "!bonjour") msg.channel.send("Message du bot");
 });
 
