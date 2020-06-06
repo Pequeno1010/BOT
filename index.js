@@ -16,8 +16,8 @@ client.on("message", msg => {
 
 // message
 
-bot.on("message", async message => {
-  let test = bot.guilds.get("698272930257305620").channels.get("698529212696625272")
+client.on("message", async message => {
+  let test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
 
   if(message.content === prefix + "ping"){
     let embed = new Discord.RichEmbed()
