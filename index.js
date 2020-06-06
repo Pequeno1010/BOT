@@ -9,7 +9,7 @@ client.on("ready", async () => {
 //message serveur on/reboot
 
 client.on("message", msg => {
-const channel = (channel =>channel.name === 'arrivée')
+
 
   if (msg.content === "!bonjour") msg.channel.send("Message du bot");
 });
