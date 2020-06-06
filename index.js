@@ -30,7 +30,7 @@ client.on("message", async => {
 client.login(process.env.BOT_TOKEN);
 
 //variable prefix
-let prefix = ('!');
+var prefix = ('!');
 
 //mention d'une personne
 
