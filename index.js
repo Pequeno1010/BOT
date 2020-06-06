@@ -17,18 +17,6 @@ client.on("message", msg => {
 
 client.login(process.env.BOT_TOKEN);
 
-//message
-client.on("message", message => {
-
-  if(message.content === prefix + "ping"){
-      var embed = new Client.RichEmbed()
-      .setTitle("Message détecte !")
-      .addField("Réponse :", "pong !")
-      message.channel.send(embed)
-  }
-
-})
-
 //variable prefix
 var prefix = ('!');
 
