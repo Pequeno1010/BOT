@@ -17,10 +17,10 @@ client.on("message", msg => {
 // message
 
 client.on("message", async message => {
-  let test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
+  var test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
 
   if(message.content === prefix + "ping"){
-    let embed = new Client.RichEmbed()
+    var embed = new Client.RichEmbed()
     .addField("Réponse :", "pong")
     test.send(embed)
   }
