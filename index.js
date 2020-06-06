@@ -10,22 +10,11 @@ client.on("ready", async () => {
 
 client.on("message", msg => {
 
-
-  if (msg.content === "!bonjour") msg.channel.send("Message du bot");
+  "arrivée".send(msg.content);
+  if (msg.content === "!on") msg.channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                               :white_check_mark:SERVEUR ON:white_check_mark:\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n :pushpin: ip serveur: 164.132.201.141:27190");
+  if (msg.content === "!reboot") msg.channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                           :no_entry:SERVEUR REBOOT:no_entry:\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n Merci de bien vouloir patienter. :slight_smile:");
 });
 
-// message
-
-client.on("message", async => {
-  let test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
-
-  if(message.content === prefix + "ping"){
-    let embed = new Client.RichEmbed()
-    .addField("Réponse :", "pong")
-    test.send(embed)
-  }
-
-})
 
 client.login(process.env.BOT_TOKEN);
 
