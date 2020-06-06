@@ -16,11 +16,11 @@ client.on("message", msg => {
 
 // message
 
-client.on("message", async message => {
-  var test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
+client.on("message", async => {
+  let test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
 
   if(message.content === prefix + "ping"){
-    var embed = new Client.RichEmbed()
+    let embed = new Client.RichEmbed()
     .addField("Réponse :", "pong")
     test.send(embed)
   }
@@ -30,7 +30,7 @@ client.on("message", async message => {
 client.login(process.env.BOT_TOKEN);
 
 //variable prefix
-var prefix = ('!');
+let prefix = ('!');
 
 //mention d'une personne
 
