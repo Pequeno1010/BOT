@@ -10,7 +10,7 @@ client.on("ready", async () => {
 
 client.on("message", msg => {
 
-  client.channels.cache.get('id').send(arrivée)
+
   if (msg.content === "!bonjour") msg.channel.send("Message du bot");
 });
 
@@ -20,7 +20,7 @@ client.on("message", async message => {
   let test = client.guilds.get("698272930257305620").channels.get("698529212696625272")
 
   if(message.content === prefix + "ping"){
-    let embed = new Discord.RichEmbed()
+    let embed = new Client.RichEmbed()
     .addField("Réponse :", "pong")
     test.send(embed)
   }
