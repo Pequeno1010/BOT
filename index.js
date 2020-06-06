@@ -11,7 +11,7 @@ client.on("ready", async () => {
 client.on("message", msg => {
 
 (channel => channel.name === 'arrivée')
-  if (msg.content === "!bonjour") channel.send("Message du bot");
+  if (msg.content === "!bonjour") msg.channel.send("Message du bot");
 });
 
 
