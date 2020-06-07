@@ -10,7 +10,7 @@ client.on("ready", async () => {
 
 client.on("message", msg => {
   const channel = client.channels.cache.get("698529212696625272");
-  if (!channel) return;
+  
   if (msg.content === "!on") msg.channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                               :white_check_mark:SERVEUR ON:white_check_mark:\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n :pushpin: ip serveur: 164.132.201.141:27190");
   if (msg.content === "!reboot") msg.channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                           :no_entry:SERVEUR REBOOT:no_entry:\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n Merci de bien vouloir patienter. :slight_smile:");
 });
