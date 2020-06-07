@@ -20,7 +20,7 @@ client.login(process.env.BOT_TOKEN);
 //variable prefix
 var prefix = ('!');
 
-//mention d'une personne
+//information sur le serv
 
 client.on('message', message => {
 
