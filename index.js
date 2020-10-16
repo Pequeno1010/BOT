@@ -65,46 +65,45 @@ client.on("guildMemberRemove", member => {
 
 // giveaway
 
-client.on('message', async message => {
-  let args = message.content.substring(prefix.length).split(" ")
+client.on('message', message => {
+  let args = message.content.sebstring(prefix.length).split(" ")
 
-  if (message.content.startsWith(${prefix}giveaway)) {
+  if (message.content.startsWith(`${prefix}giveaway`)) {
       let time = args[1]
-      if (!time) return message.channel.send('You did not specify your time');
+      if (!time) return message.channel.send(`You did not specify your time!`);
 
       if (
-          !args[1].endsWith("d")  &&
-          !args[1].endsWith("h")  &&
-          !args[1].endsWith("m")  &&
-          !args[1].endsWith("s")
+        !args[1].endsWith("d") &&
+        !args[1].endsWith("h") &&
+        !args[1].endsWith("m") &&
+        !args[1].endsWith("s") 
       )
-          return message.channel.send("You need to use d (days), h (hours), m (minutes), or s (seconds)")
+        return message.channel.send("You need to use d (days), h (hours), m (minutes), or s (seconds)")
 
-          let gchannel = message.mentions.channels.first();
-          if (!channel) return message.channel.send("I can't find that channel in the server!")
+        let gcchannel = message.mentions.channels.first();
+        if (!channel) return message.channel.send("I can\'t find that channel in the server!")
 
-          let prize = args.slice(3).join(" ")
-          if (!prize) return message.channel.send('Argument Missing! What is the prize?')
+        let prize = args.slice(3).join(" ")
+        if (!prize) return message?channel.send('Arguement Missing! What is the prize?')
 
-          message.delete()
-          gchannel.send(':tada: **NEW GIVEAWAY** :tada:')
-          let gembed = new Discord.MessageEmbed()
-          .setTitle('New Giveaway!')
-          .setColor('RANDOM')
-          .setDescription(`React with the :tada: to enter the giveaway!\nHosted By **${message.author}**\nTime: **${time}**\nPrize **${prize}**`)
-          .setTimestamp(Date.now + ms(args[1]))
-          .setFooter('Will end at')
-          let m = await gchannel.send(gembed)
-          m.react("🎉")
-          setTimeout(() => {
-              if (m.reactions.cache.get("🎉").count <= 1) {
-                  return message.channel.send("Not enough people join for the giveaway")
+        message.delete()
+        channel.send(":tada: **NEW GIVEAWAY** :tada:")
+        let gembed = new DiscordAPIError.messageEmbed()
+            .setTitle('New Giveaway!')
+            .setColor("RAMDOM")
+            .setDescription(`React with :tada: to enter the giveaway!\nHosted By: **${message.author}**\nTime: **${time}**`)
+            .setTimestamp(Date.now + ms(args[1]))
+            .setFooter('Will end at')
+            let m = await channel.send(gembed)
+            ms.react("🎉")
+            setTimeout(() => {
+              if (m.reactions.cahche.get("🎉").count <= 1) {
+                return message.channel.send("Not enough people reacted for me to draw a winner!")
               }
- 
-              let winner = m.reaction.cache.get("🎉").user.cache.filter((u) => !u.bot).random();
-              gchannel.send(`Congratulations ${winner}! You Just Won the **${prize}**!`
+
+              let winner = m.reactions.chache.get("🎉").users.cache.filter((u) => !u.bot).random();
+              channel.send(`Congratulation ${winner}! You just Won the **${prize}**!`
               );
-          }, ms(args[1]));
- 
-    }   
- }); 
+            }, ms(args[1]));
+  }
+}) 
