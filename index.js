@@ -1,6 +1,5 @@
 const { Client, DiscordAPIError } = require("discord.js");
 const client = new Client();
-const ms = require('ms')
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
