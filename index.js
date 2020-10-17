@@ -22,6 +22,7 @@ client.on("message", msg => {
   const channel = client.channels.cache.get("698529212696625272");
   if (!channel) return;
   if (msg.content === "!raid off activé") channel.send("@everyone ");
+  if (msg.content === "!raid off désativé") channel.send("@everyone Le raid off est maintenant désactivé.\n Bon jeu😎");
   if (msg.content === "!raid off désativé dans 5min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
   if (msg.content === "!raid off désativé dans 10min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 10 minutes");
   if (msg.content === "!raid off désativé dans 15min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 15 minutes");
