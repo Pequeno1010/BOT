@@ -3,7 +3,7 @@ const client = new Client();
 
 client.on("ready", async () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity('NeverLand');
+  client.user.setActivity('Optimal pvp');
 });
 
 ////message serveur on/reboot ////
