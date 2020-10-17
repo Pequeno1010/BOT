@@ -57,13 +57,7 @@ client.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
   channel.send(`${member} Bonjour, bienvenue sur le serveur **Optimal PVP**!\n\n Merci de bien vouloir vous rendre dans #registration  pour vous enregistrer en indiquant bien les informations demandées.\n\n Une fois que vous vous êtes enregistré aller dans #confirm-registration pour obtenir votre rôle Membre qui vous permet d’avoir accès à l’intégralité du Discord.\n Bon jeu ! `);
   try {
-    member.send("Bonjour, le staff te souhaite la bien venue sur le serveur.Voici quelques informations sur le serveur")
-    member.send("IP:")
-    member.send("Top serveur:")
-    member.send("Règlement:")
-    member.send("Les salons pour les entreprises sont dans d'autres Discord, tu seras invité dessus quand tu seras dans l'entreprise.")
-    member.send("Si tu rencontres des problèmes sur le serveur hésite pas à venir en besoin d'aide")
-    member.send("Merci d'avoir rejoins le serveur, bon jeu.👍")
+    member.send("Bonjour, il est obligatoire de s'enregistrer dans le salon #registration en indiquant les informations demandées.\n\n Ensuite rendez-vous dans #confirm-registration pour obtenir votre rôle membre qui donne accès a l'intégralité du Discord.\n\n Merci de bien lire le règlement.\n\n Bon jeu !")
   }
   catch (err) {
     console.log(`Impossible d'envoyer un message privé à ${member}.`)
