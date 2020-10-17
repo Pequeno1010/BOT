@@ -22,7 +22,7 @@ client.on("message", msg => {
   const channel = client.channels.cache.get("698529212696625272");
   if (!channel) return;
   if (msg.content === "!raidoffactivé") channel.send("@everyone ");
-  if (msg.content === "!raidoffdésativé") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
+  if (msg.content === "!raid off désativé") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
 });
 
 client.login(process.env.BOT_TOKEN);
