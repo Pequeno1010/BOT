@@ -72,7 +72,7 @@ client.on("guildMemberAdd", member => {
 
 client.on("guildMemberRemove", member => {
   const channel = member.guild.channels.cache.find(channel => channel.name === 'départ')
-  channel.send(`${member} Bonne continuation`);
+  channel.send(`${member}a préféré nous quitter\n https://tenor.com/view/peterson-farm-bros-dinosaur-truck-atv-gif-8466996`);
 });
 
 
