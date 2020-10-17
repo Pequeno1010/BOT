@@ -55,7 +55,7 @@ var prefix = ('!');
 
 client.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
-  channel.send(`${member} Salut {user}, bienvenue sur le serveur **Optimal PVP**!\n Merci de bien vouloir vous rendre dans #registration  pour vous enregistrer en indiquant bien les informations demandées.\n Une fois que vous vous êtes enregistré aller dans #confirm-registration pour obtenir votre rôle Membre qui vous permet d’avoir accès à l’intégralité du Discord.\n Bon jeu ! `);
+  channel.send(`${member} Bonjour, bienvenue sur le serveur **Optimal PVP**!\n\n Merci de bien vouloir vous rendre dans #registration  pour vous enregistrer en indiquant bien les informations demandées.\n\n Une fois que vous vous êtes enregistré aller dans #confirm-registration pour obtenir votre rôle Membre qui vous permet d’avoir accès à l’intégralité du Discord.\n Bon jeu ! `);
   try {
     member.send("Bonjour, le staff te souhaite la bien venue sur le serveur.Voici quelques informations sur le serveur")
     member.send("IP:")
