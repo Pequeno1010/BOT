@@ -6,7 +6,7 @@ client.on("ready", async () => {
   client.user.setActivity('NeverLand');
 });
 
-//message serveur on/reboot
+////message serveur on/reboot ////
 
 client.on("message", msg => {
   const channel = client.channels.cache.get("698529212696625272");
@@ -15,52 +15,62 @@ client.on("message", msg => {
   if (msg.content === "!reboot") channel.send("@everyone\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n                           ⛔SERVEUR REBOOT⛔\n ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n Merci de bien vouloir patienter.");
 });
 
+
+//// message raid off activé/désactivé ////
+
+client.on("message", msg => {
+  const channel = client.channels.cache.get("765989231755132930");
+  if (!channel) return;
+  if (msg.content === "!raid_off_activé") channel.send("@everyone ");
+  if (msg.content === "!raid_off_désativé") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
+});
+
 client.login(process.env.BOT_TOKEN);
 
 //variable prefix
 var prefix = ('!');
 
-//information sur le serv
+//// information sur le serv ////
 
-client.on('message', message => {
+//client.on('message', message => {
 
-    if(message.content === prefix + "ip"){
+    //if(message.content === prefix + "ip"){
 
-        message.channel.send("ip serveur: 164.132.201.141:27190")
+        //message.channel.send("ip serveur: 164.132.201.141:27190")
 
-    }
+    //}
 
-    if(message.content === prefix + "top serveur"){
+    //if(message.content === prefix + "top serveur"){
 
-        message.channel.send("top serveur:")
+        //message.channel.send("top serveur:")
 
-    }
+    //}
 
-})
+//})
 
-//message d'arrivée/départ
+//// message d'arrivée/départ ////
 
-client.on("guildMemberAdd", member => {
-  const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
-  channel.send(`${member} Bonjour, bienvenue sur le serveur merci de bien lire le règlement.📰 `);
-  try {
-    member.send("Bonjour, le staff te souhaite la bien venue sur le serveur.Voici quelques informations sur le serveur")
-    member.send("IP:")
-    member.send("Top serveur:")
-    member.send("Règlement:")
-    member.send("Les salons pour les entreprises sont dans d'autres Discord, tu seras invité dessus quand tu seras dans l'entreprise.")
-    member.send("Si tu rencontres des problèmes sur le serveur hésite pas à venir en besoin d'aide")
-    member.send("Merci d'avoir rejoins le serveur, bon jeu.👍")
-  }
-  catch (err) {
-    console.log(`Impossible d'envoyer un message privé à ${member}.`)
-  }
-});
+//client.on("guildMemberAdd", member => {
+  //const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
+  //channel.send(`${member} Bonjour, bienvenue sur le serveur merci de bien lire le règlement.📰 `);
+  //try {
+    //member.send("Bonjour, le staff te souhaite la bien venue sur le serveur.Voici quelques informations sur le serveur")
+    //member.send("IP:")
+    //member.send("Top serveur:")
+    //member.send("Règlement:")
+    //member.send("Les salons pour les entreprises sont dans d'autres Discord, tu seras invité dessus quand tu seras dans l'entreprise.")
+    //member.send("Si tu rencontres des problèmes sur le serveur hésite pas à venir en besoin d'aide")
+    //member.send("Merci d'avoir rejoins le serveur, bon jeu.👍")
+  //}
+  //catch (err) {
+    //console.log(`Impossible d'envoyer un message privé à ${member}.`)
+  //}
+//});
 
-client.on("guildMemberRemove", member => {
-  const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
-  channel.send(`${member} Bonne continuation`);
-});
+//client.on("guildMemberRemove", member => {
+  //const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
+  //channel.send(`${member} Bonne continuation`);
+//});
 
 
 
