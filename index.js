@@ -71,7 +71,7 @@ client.on("guildMemberAdd", member => {
 });
 
 client.on("guildMemberRemove", member => {
-  const channel = member.guild.channels.cache.find(channel => channel.name === 'arrivée')
+  const channel = member.guild.channels.cache.find(channel => channel.name === 'départ')
   channel.send(`${member} Bonne continuation`);
 });
 
