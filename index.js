@@ -19,7 +19,7 @@ client.on("message", msg => {
 //// message raid off activé/désactivé ////
 
 client.on("message", msg => {
-  const channel = client.channels.cache.get("765989231755132930");
+  const channel = client.channels.cache.get("698529212696625272");
   if (!channel) return;
   if (msg.content === "!raid_off_activé") channel.send("@everyone ");
   if (msg.content === "!raid_off_désativé") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
