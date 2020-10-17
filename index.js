@@ -19,16 +19,16 @@ client.on("ready", async () => {
 //// message raid off activé/désactivé ////
 
 client.on("message", msg => {
-  const channel = client.channels.cache.get("766945117650550814");
+  const channel = client.channels.cache.get("765989231755132930");
   if (!channel) return;
   if (msg.content === "!raid off activé") channel.send("@everyone l'anti  raid off est maintenant activé.\n Bon jeu 😎");
-  if (msg.content === "!raid off désativé dans 5min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est activé dans 5 minutes");
-  if (msg.content === "!raid off désativé dans 10min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est activé dans 10 minutes");
-  if (msg.content === "!raid off désativé dans 15min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est activé dans 15 minutes");
-  if (msg.content === "!raid off désativé") channel.send("@everyone l'anti  raid off est maintenant désactivé.\n Bon jeu 😎");
-  if (msg.content === "!raid off désativé dans 5min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
-  if (msg.content === "!raid off désativé dans 10min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 10 minutes");
-  if (msg.content === "!raid off désativé dans 15min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 15 minutes");
+  if (msg.content === "!raid off activé dans 5min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est activé dans 5 minutes");
+  if (msg.content === "!raid off activé dans 10min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est activé dans 10 minutes");
+  if (msg.content === "!raid off activé dans 15min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est activé dans 15 minutes");
+  if (msg.content === "!raid off désactivé") channel.send("@everyone l'anti  raid off est maintenant désactivé.\n Bon jeu 😎");
+  if (msg.content === "!raid off désactivé dans 5min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 5 minutes");
+  if (msg.content === "!raid off désactivé dans 10min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 10 minutes");
+  if (msg.content === "!raid off désactivé dans 15min") channel.send("@everyone Salut tout le monde je viens vous prévenir que l'anti raid off est désactivé dans 15 minutes");
 });
 
 client.login(process.env.BOT_TOKEN);
