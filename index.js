@@ -58,7 +58,7 @@ var prefix = ('!');
 
 client.on("guildMemberAdd", member => {
   const channel = member.guild.channels.cache.find(channel => channel.name === '🗽bienvenue')
-  channel.send(`${member} Bonjour, bienvenue sur le serveur **Optimal PVP**!\n\n Merci de bien vouloir vous rendre dans #registration  pour vous enregistrer en indiquant bien les informations demandées.\n\n Une fois que vous vous êtes enregistré aller dans #confirm-registration pour obtenir votre rôle Membre qui vous permet d’avoir accès à l’intégralité du Discord.\n Bon jeu ! `);
+  channel.send(`${member} Bonjour, bienvenue sur le serveur **Optimal PVP**!\n\n Merci de bien vouloir vous rendre dans #registration  pour vous enregistrer en indiquant bien les informations demandées.\n\n Une fois que vous vous êtes enregistré aller dans #confirm-registration pour obtenir votre rôle Membre qui vous permet d’avoir accès à l’intégralité du Discord.\n Bon jeu !\n https://tenor.com/view/spongebob-welcome-happy-rainbow-gif-15830260 `);
   try {
     member.send("Bonjour, il est obligatoire de s'enregistrer dans le salon #registration en indiquant les informations demandées.\n\n Ensuite rendez-vous dans #confirm-registration pour obtenir votre rôle membre qui donne accès a l'intégralité du Discord.\n\n Merci de bien lire le règlement.\n\n Bon jeu !")
   }
